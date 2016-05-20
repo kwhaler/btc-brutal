@@ -36,7 +36,7 @@ var vis = d3.select(".soi").insert("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(" + (w - r) / 2 + "," + (h - r) / 2 + ")");
 
-d3.json("/data/soi-92.json", function(data) {
+d3.json("{{ site.baseurl }}/data/soi-92.json", function(data) {
 
   node = root = data;
   var nodes = pack.nodes(root);        
