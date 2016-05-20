@@ -1,0 +1,51 @@
+{
+ "name": "Measure 92",
+ "children": [
+  {
+   "name": "Support",
+   "children": [
+    {
+     "name": "PACs",
+     "children": [
+      {"name": "Vote Yes on Measure 92", "size": 9112288.00},
+      {"name": "Oregon GMO Right to Know", "size": 1511044.92},
+      {"name": "OSPIRG Action (PAC)", "size": 495482.84},
+      {"name": "Committee for Oregon's Right to Know", "size": 112000.00},
+      {"name": "Oregonians for Safe Farms & Families", "size": 25938.89}
+     ]
+    },
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Dr Bronner's Magic Soaps", "size": 2172634.81},
+      {"name": "Center for Food Safety Action Fund", "size": 1228000.00},
+      {"name": "Mercola.com Health Resources LLC", "size": 1050000.00},
+      {"name": "Organic Consumer's Fund", "size": 680000.00},
+      {"name": "Tom Hormel", "size": 500000.00}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Oppose",
+   "children": [
+    {
+     "name": "PACs",
+     "children": [
+      {"name": "Vote No on 92 Coalition", "size": 20477544.17}
+     ]
+    },
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Monsanto", "size": 5958750.00},
+      {"name": "DuPont Pioneer", "size": 4518150.00},
+      {"name": "PepsiCo, Inc", "size": 2350000.00},
+      {"name": "Coca-Cola", "size": 1170000},
+      {"name": "DOW AgroSciences LLC", "size": 1157150}
+     ]
+    }
+   ]
+  }
+ ]
+}

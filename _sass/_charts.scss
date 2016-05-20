@@ -1,0 +1,108 @@
+body {
+      font-family: 'Inconsolata','Inconsolata Medium', monospace, sans-serif;
+      font-size: 1.2em;
+    }
+
+    .site-title, .site-subtitle, .section-heading {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-align: center;
+    }
+
+    .site-title {
+      text-transform: uppercase;
+    }
+
+    .site-subtitle {
+      font-size: 1.28em;
+      font-weight: bold;
+    }
+
+    .section-heading {
+      font-size: 1.76em;
+      border-bottom: solid 2px #222;
+      padding-bottom: 20px;
+      margin: 25px auto;
+    }
+
+    /* sphere of influence */
+
+    text {
+      font: 13px 'Inconsolata', 'Inconsolata Medium', monospace, sans-serif;
+      pointer-events: none;
+    }
+
+    text.parent {
+      fill: #222;
+      font-weight: bold;
+      background-color: #FFF;
+    }
+
+    circle {
+      fill: #FFF;
+      stroke: #222;
+      pointer-events: all;
+    }
+
+    circle.parent:first-child {
+      fill: #EEE;
+      fill-opacity: .1;
+      stroke: #222;
+      stroke-width: 2px;
+    }
+
+    circle.parent:hover {
+      stroke: #222;
+      stroke-width: 2px;
+    }
+
+    circle.child {
+      fill: #EEE;
+      pointer-events: none;
+    }
+
+    /* money raised and spent */
+
+    #raised_spent .legend {
+      text-anchor: start;
+      fill: #222;
+    }
+
+    #raised_spent text {
+      fill: #222;
+      text-anchor: end;
+    }
+
+    #raised_spent .label {
+      fill: #222;
+      font: 13px 'Inconsolata', 'Inconsolata Medium', monospace, sans-serif;
+      text-anchor: end;
+    }
+
+    #raised_spent .bar {
+      /*fill: #FFF;*/
+      stroke: #000;
+    }
+
+    #raised_spent .bar:hover {
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    #raised_spent .axis path,
+    #raised_spent .axis line {
+      fill: none;
+      stroke: #222;
+      stroke-width: 4;
+      shape-rendering: crispEdges;
+    }
+
+    #raised_spent .legend_swatch {
+      fill: #FFF;
+      stroke: #222;
+    }
+
+    /* Custom */
+
+    #raised_spent #measure-92 {
+      fill: red;
+    }

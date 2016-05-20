@@ -1,0 +1,41 @@
+{
+ "name": "Measure 91",
+ "children": [
+  {
+   "name": "Support",
+   "children": [
+    {
+     "name": "PACs",
+     "children": [
+      {"name": "Vote", "size": 112288.00},
+      {"name": "Oregon GMO", "size": 511044.92},
+      {"name": "Action (PAC)", "size": 95482.84},
+      {"name": "Oregon's Right to Know", "size": 11000.00}
+     ]
+    },
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Magic Soaps", "size": 172634.81},
+      {"name": "Health Resources LLC", "size": 50000.00},
+      {"name": "Consumer's Fund", "size": 880000.00}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Oppose",
+   "children": [
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Pioneer", "size": 4518150.00},
+      {"name": "Inc", "size": 2350000.00},
+      {"name": "Cola", "size": 1170000},
+      {"name": "AgroSciences LLC", "size": 1157150}
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "nodes":[
+    {"name":"Vote Yes on Measure 92","group":1, "contribution": 9112288.00},
+    {"name":"Oregon GMO Right to Know","group":1, "contribution": 1511044.92},
+    {"name":"OSPIRG Action (PAC)","group":1, "contribution": 495482.84},
+    {"name":"Committee for Oregon's Right to Know","group":1, "contribution": 112000.00},
+    {"name":"Oregonians for Safe Farms & Families","group":1, "contribution": 25938.89},
+    {"name":"Dr Bronner/'s Magic Soaps", "group": 2, "contribution": 2172634.81},
+    {"name":"Center for Food Safety Action Fund", "group":2, "contribution": 1228000.00},
+    {"name":"Mercola.com Health Resources LLC","group":2,"contribution":1050000.00},
+    {"name":"Organic Consumer/'s Fund","group":2,"contribution":680000.00},
+    {"name":"Tom Hormel","group":2,"contribution":500000.00},
+    {"name":"Vote No on 92 Coalition","group":3,"contribution":20881181.73},
+    {"name":"Monsanto","group":4,"contribution":5958750.00},
+    {"name":"DuPont Pioneer","group":4,"contribution":4518150.00},
+    {"name":"PepsiCo, Inc.","group":4,"contribution":2350000.00},
+    {"name":"Coca-Cola","group":4,"contribution":1170000},
+    {"name":"DOW AgroSciences LLC","group":4,"contribution":1157150}
+  ],
+  "links":[
+    {"source":1,"target":0,"value":1},  
+    {"source":2,"target":0,"value":1},
+    {"source":3,"target":0,"value":1},
+    {"source":4,"target":0,"value":1},
+    {"source":5,"target":0,"value":2},
+    {"source":6,"target":0,"value":2},
+    {"source":7,"target":0,"value":2},
+    {"source":8,"target":0,"value":2},
+    {"source":9,"target":0,"value":2},
+    {"source":10,"target":0,"value":2},
+    {"source":11,"target":10,"value":1},
+    {"source":12,"target":10,"value":1},
+    {"source":13,"target":10,"value":1},
+    {"source":14,"target":10,"value":1},
+    {"source":15,"target":10,"value":1}
+  ]
+}
+

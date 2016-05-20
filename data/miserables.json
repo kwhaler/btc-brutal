@@ -1,0 +1,16 @@
+{
+  "nodes":[
+    {"name":"Vote Yes on Measure 92","group":1, "raised": 10},
+    {"name":"Oregon GMO Right to Know","group":1, "raised": 10},
+    {"name":"OSPIRG Action (PAC)","group":1, "raised":10 },
+    {"name":"Committee for Oregon's Right to Know", "group":1, "raised": 10},
+    {"name":"Oregonians for Safe Farms & Families","group":1}
+  ],
+  "links":[
+    {"source":1,"target":0,"value":1},
+    {"source":2,"target":0,"value":8},
+    {"source":3,"target":0,"value":10},
+    {"source":3,"target":2,"value":6}
+  ]
+}
+
