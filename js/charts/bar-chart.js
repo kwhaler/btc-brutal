@@ -1,113 +1,5 @@
----
-layout: default
----
-<h1 class='site-title'>$phere of Influence</h1>
-<h2 class='site-subtitle'>Influential companies and individuals in Oregon</h2>
-
-<p class='data-selector'>
-  Measure 
-  <a class='measure-90' href='#'>90</a>
-  <a class='measure-91' href='#'>91</a>
-  <a class='measure-92' href='#'>92</a>
-</p>
-
-
-<h3 class='section-heading'>Oregon Mandatory Labeling of GMOs Initiative, Measure 92 (2014)</h3>
-
-<div class='soi'></div>
-<div id='bubble'></div>
-<!-- <script src= 'js/charts/bubble-chart.js'></script> -->
-<h3 class='section-heading'>Money spent and raised</h3>
-<svg id='raised_spent'></svg>
-<script src= 'js/charts/bar-chart.js'></script>
-<style>
-
-circle {
-  fill: rgba(0,0,0,0.05);
-  fill-opacity: .25;
-  stroke: rgb(0, 0, 0);
-  stroke-width: 1px;
-}
-
-.leaf circle {
-  fill: #FFF;
-  fill-opacity: 1;
-}
-
-text {
-  font: 10px monospace;
-}
-
-</style>
-<script>
-
-var dataset90 = 'data/soi-90.json',
-    dataset91 = 'data/soi-91.json',
-    dataset92 = 'data/soi-92.json';
-
-var renderChart = function(data) {
-
-  var diameter = 760,
-      format = d3.format(',d');
-
-  var pack = d3.layout.pack()
-    .size([diameter - 4, diameter - 4])
-    .value(function(d) { return d.size; });
-
-  d3.select("svg").remove();
-
-var svg = d3.select('#bubble').append('svg')
-    .attr('width', diameter)
-    .attr('height', diameter)
-  .append('g')
-    .attr('transform', 'translate(2,2)');
-
-  d3.json(data, function(error, root) {
-  
-  var node = svg.datum(root).selectAll('.node')
-      .data(pack.nodes)
-    .enter().append('g')
-      .attr('class', function(d) { return d.children ? 'node' : 'leaf node'; })
-      .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
-
-    if (error) throw error;
-
-    node.append('title')
-        .text(function(d) { return d.name + (d.children ? '' : ': ' + format(d.size)); });
-
-    node.append('circle')
-        .attr('r', function(d) { return d.r; });
-
-    node.filter(function(d) { return !d.children; }).append('text')
-        .attr('dy', '.3em')
-        .style('text-anchor', 'middle')
-        .text(function(d) { return d.name.substring(0, d.r / 3); });
-
-  });
-
-  d3.select(self.frameElement).style('height', diameter + 'px');
-
-};
-
-renderChart(dataset90);
-
-d3.select('a.measure-90').on('click', function(){
-  renderChart(dataset90);
-});
-d3.select('a.measure-91').on('click', function(){
-  renderChart(dataset91);
-});
-d3.select('a.measure-92').on('click', function(){
-  renderChart(dataset92);
-});
-
-</script>
-
-
-<svg id="raised_spent"></svg>
-
-<script>
 var drawBars = (function(){
+
 var data = {
 labels: [
   'Support', 'Oppose'
@@ -122,6 +14,7 @@ series: [
     values: [10943706.61,20477544.17]
   }]
 };
+
 var chartWidth       = 600,
   barHeight        = 35,
   groupHeight      = barHeight * data.series.length,
@@ -129,6 +22,7 @@ var chartWidth       = 600,
   spaceForLabels   = 55,
   spaceForLegend   = 150,
   format           = d3.format(",.2f");
+
 // Zip the series data together (first values, second values, etc.)
 var zippedData = [];
 for (var i=0; i<data.labels.length; i++) {
@@ -136,23 +30,29 @@ for (var j=0; j<data.series.length; j++) {
   zippedData.push(data.series[j].values[i]);
 }
 }
+
 // Color scale
 var color = d3.scale.linear().range(['#FFF','#EEE']);
 var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
+
 var x = d3.scale.linear()
   .domain([0, d3.max(zippedData)])
   .range([0, chartWidth]);
+
 var y = d3.scale.linear()
   .range([chartHeight + gapBetweenGroups, 0]);
+
 var yAxis = d3.svg.axis()
   .scale(y)
   .tickFormat('')
   .tickSize(0)
   .orient("left");
+
 // Specify the chart area and dimensions
 var chart = d3.select("#raised_spent")
   .attr("width", spaceForLabels + chartWidth + spaceForLegend)
   .attr("height", chartHeight);
+
 // Create bars
 var bar = chart.selectAll("g")
   .data(zippedData)
@@ -160,12 +60,14 @@ var bar = chart.selectAll("g")
   .attr("transform", function(d, i) {
     return "translate(" + spaceForLabels + "," + (i * barHeight + gapBetweenGroups * (0.5 + Math.floor(i/data.series.length))) + ")";
   });
+
 // Create rectangles of the correct width
 bar.append("rect")
   .attr("fill", function(d,i) { return color(i % data.series.length); })
   .attr("class", "bar")
   .attr("width", x)
   .attr("height", barHeight - 1);
+
 // Add text label in bar
 bar.append("text")
   .attr("x", function(d) { return x(d) - 3; })
@@ -173,6 +75,7 @@ bar.append("text")
   .attr("fill", "red")
   .attr("dy", ".35em")
   .text(function(d) { return "$" + format(d); });
+
 // Draw labels
 bar.append("text")
   .attr("class", "label")
@@ -184,13 +87,16 @@ bar.append("text")
       return data.labels[Math.floor(i/data.series.length)];
     else
       return ""});
+
 chart.append("g")
     .attr("class", "y axis")
     .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups/2 + ")")
     .call(yAxis);
+
 // Draw legend
 var legendRectSize = 18,
   legendSpacing  = 4;
+
 var legend = chart.selectAll('.legend')
   .data(data.series)
   .enter()
@@ -202,16 +108,18 @@ var legend = chart.selectAll('.legend')
       var vert = i * height - offset;
       return 'translate(' + horz + ',' + vert + ')';
   });
+
 legend.append('rect')
   .attr('width', legendRectSize)
   .attr('height', legendRectSize)
   .attr('class','legend_swatch')
   .style('fill',   function (d, i) { return color(i); });
   // .style('stroke', function (d, i) { return color(i); });
+
 legend.append('text')
   .attr('class', 'legend')
   .attr('x', legendRectSize + legendSpacing)
   .attr('y', legendRectSize - legendSpacing)
   .text(function (d) { return d.label; });
+
 })();
-</script>

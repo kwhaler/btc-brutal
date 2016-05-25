@@ -1,0 +1,42 @@
+{
+ "name": "Measure 90",
+ "children": [
+  {
+   "name": "Support",
+   "children": [
+    {
+     "name": "PACs",
+     "children": [
+      {"name": "Vote", "size": 9112288.00},
+      {"name": "Safe Farms & Families", "size": 25938.89}
+     ]
+    },
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Dr Bronner's Magic Soaps", "size": 2172634.81},
+      {"name": "Tom Hormel", "size": 500000.00}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Oppose",
+   "children": [
+    {
+     "name": "PACs",
+     "children": [
+      {"name": "Coalition", "size": 20477544.17}
+     ]
+    },
+    {
+     "name": "Contributors",
+     "children": [
+      {"name": "Coca-Cola", "size": 1170000},
+      {"name": "DOW AgroSciences LLC", "size": 1157150}
+     ]
+    }
+   ]
+  }
+ ]
+}
